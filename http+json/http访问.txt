@@ -1,0 +1,1 @@
+wget localhost:7963/?methodName=MainLogic.MainLogicService.GetTitles --post-data='{"type":"special"}'

@@ -1,0 +1,25 @@
+
+
+
+message playerLoginRequest
+{  
+    optional string account = 1;  
+    optional string pwd = 2;
+
+    optional int64 id = 3; 
+}
+
+message playerLoginRespond
+{
+  enum ResultStat {
+   	OK = 1; 
+	NoExist = 2 ; 
+	ServerCash = 3; 
+  }
+  required ResultStat result = 1; 
+  
+  optional int64 id = 2;
+  optional bytes sessionKey = 3;
+  optional string name =4;      
+}
+
